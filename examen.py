@@ -2,6 +2,9 @@ pacientes = []
 
 
 def mostrar_menu():
+    """
+    Muestra las opciones del menu para que el usuario elija.
+    """
     print(
         """
 #################menu#################
@@ -21,6 +24,9 @@ def mostrar_menu():
 
 
 def cargar_paciente():
+    """
+    Permite agregar pacientes con sus datos como nombre, edad, etc.
+    """
     numero_de_pacientes = int(input("cuantos pacientes deseas agregar: "))
     for _ in range(numero_de_pacientes):
         historia_clinica = int(input("historia clinica: "))
@@ -35,6 +41,9 @@ def cargar_paciente():
 
 
 def mostrar_pacientes():
+    """
+    Muestra la lista de pacientes guardados.
+    """
     if pacientes == []:
         print("no hay pacientes")
         return
@@ -46,6 +55,9 @@ def mostrar_pacientes():
 
 
 def buscar_paciente():
+    """
+    Busca un paciente por el numero de historia clinica.
+    """
     if pacientes == []:
         print("no hay pacientes")
         return
@@ -61,6 +73,9 @@ def buscar_paciente():
 
 
 def ordenar_pacientes():
+    """
+    Ordena la lista de pacientes por el numero de historia clinica.
+    """
     if pacientes == []:
         print("no hay pacientes")
         return
@@ -73,6 +88,9 @@ def ordenar_pacientes():
 
 
 def mostrar_mas_dias():
+    """
+    Muestra el paciente con mas dias de internacion..
+    """
     if pacientes == []:
         print("no hay pacientes")
         return
@@ -94,6 +112,9 @@ def mostrar_mas_dias():
 
 
 def mostrar_menos_dias():
+    """
+    Muestra el paciente con menos dias de internacion.
+    """
     if pacientes == []:
         print("no hay pacientes")
         return
@@ -115,6 +136,9 @@ def mostrar_menos_dias():
 
 
 def pacientes_mas_5_dias():
+    """
+    Muestra los pacientes que tienen mas de 5 dias de internacion.
+    """
     if pacientes == []:
         print("no hay pacientes")
         return
@@ -126,6 +150,9 @@ def pacientes_mas_5_dias():
 
 
 def promedio_dias_internacion():
+    """
+    Calcula el promedio de dias de internacion de todos los pacientes.
+    """
     if pacientes == []:
         print("no hay pacientes")
         return
@@ -138,6 +165,9 @@ def promedio_dias_internacion():
 
 
 def menu():
+    """
+    Muestra el menu y deja elegir opciones hasta que el usuario decida salir.
+    """
     continuar = True
     while continuar:
         opcion = mostrar_menu()
